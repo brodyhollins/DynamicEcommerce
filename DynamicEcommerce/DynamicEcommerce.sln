@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicEcommerce", "DynamicEcommerce.csproj", "{BFE903D3-7FFB-4109-83A8-30ED62178024}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicEcommerce.Data", "..\DynamicEcommerce.Data\DynamicEcommerce.Data.csproj", "{31C4FF57-653B-417A-BFD9-65D4D28EA93A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFE903D3-7FFB-4109-83A8-30ED62178024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE903D3-7FFB-4109-83A8-30ED62178024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE903D3-7FFB-4109-83A8-30ED62178024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE903D3-7FFB-4109-83A8-30ED62178024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C4FF57-653B-417A-BFD9-65D4D28EA93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C4FF57-653B-417A-BFD9-65D4D28EA93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C4FF57-653B-417A-BFD9-65D4D28EA93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C4FF57-653B-417A-BFD9-65D4D28EA93A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB282205-DBAD-4198-AF05-B1F997827082}
+	EndGlobalSection
+EndGlobal
