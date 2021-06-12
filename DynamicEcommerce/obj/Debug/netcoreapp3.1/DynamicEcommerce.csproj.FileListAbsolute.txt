@@ -1,0 +1,7 @@
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\Dynamic\DynamicEcommerce\obj\Debug\netcoreapp3.1\DynamicEcommerce.csprojAssemblyReference.cache
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\Dynamic\DynamicEcommerce\obj\Debug\netcoreapp3.1\DynamicEcommerce.AssemblyInfoInputs.cache
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\Dynamic\DynamicEcommerce\obj\Debug\netcoreapp3.1\DynamicEcommerce.AssemblyInfo.cs
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\Dynamic\DynamicEcommerce\obj\Debug\netcoreapp3.1\DynamicEcommerce.csproj.CoreCompileInputs.cache
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\Dynamic\DynamicEcommerce\obj\Debug\netcoreapp3.1\DynamicEcommerce.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\Dynamic\DynamicEcommerce\obj\Debug\netcoreapp3.1\DynamicEcommerce.RazorAssemblyInfo.cache
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\Dynamic\DynamicEcommerce\obj\Debug\netcoreapp3.1\DynamicEcommerce.RazorAssemblyInfo.cs

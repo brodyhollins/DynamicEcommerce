@@ -9,5 +9,7 @@ namespace DynamicEcommerce.Data
         {
 
         }
+
+        public DbSet<Product> Products { get; set; }
     }
 }
