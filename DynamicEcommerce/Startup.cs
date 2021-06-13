@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DynamicEcommerce.Data;
+using DynamicEcommerce.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,7 @@ namespace DynamicEcommerce
                     Configuration.GetConnectionString("DefaultConnection")
                     )
             );
+            services.AddScoped<IProduct, ProductService>();
             services.AddControllersWithViews();
         }
 

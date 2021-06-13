@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DynamicEcommerce.Data\DynamicEcommerce.Data.csproj" />
+    <ProjectReference Include="..\DynamicEcommerce.Services\DynamicEcommerce.Services.csproj" />
   </ItemGroup>
 
 </Project>
