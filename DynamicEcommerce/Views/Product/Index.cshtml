@@ -2,9 +2,11 @@
 
 <div class="container">
     <div class="row product-content">
-        @foreach (var image in Model.Products)
+        @foreach (var product in Model.Products)
         {
-            <div class="product-image" style="background-image:url(@image.Image)"></div>
+        <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">
+            <div class="product-image" style="background-image:url(@product.Image)"></div>
+        </a>
         }
     </div>
 </div>
