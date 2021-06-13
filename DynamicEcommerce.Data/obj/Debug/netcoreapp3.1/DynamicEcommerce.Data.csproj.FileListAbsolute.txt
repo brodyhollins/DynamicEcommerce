@@ -6,3 +6,7 @@ C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\D
 C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce.Data\bin\Debug\netcoreapp3.1\DynamicEcommerce.Data.runtimeconfig.json
 C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce.Data\bin\Debug\netcoreapp3.1\DynamicEcommerce.Data.runtimeconfig.dev.json
 C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce.Data\obj\Debug\netcoreapp3.1\DynamicEcommerce.Data.genruntimeconfig.cache
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce.Data\bin\Debug\netcoreapp3.1\DynamicEcommerce.Data.pdb
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce.Data\obj\Debug\netcoreapp3.1\DynamicEcommerce.Data.dll
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce.Data\obj\Debug\netcoreapp3.1\DynamicEcommerce.Data.pdb
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce.Data\obj\Debug\netcoreapp3.1\DynamicEcommerce.Data.csproj.CoreCompileInputs.cache

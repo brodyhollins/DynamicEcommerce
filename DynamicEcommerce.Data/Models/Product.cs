@@ -17,5 +17,8 @@ namespace DynamicEcommerce.Data.Models
         public decimal Price { get; set; }
         [Required]
         public string Image { get; set; }
+        public DateTime Created { get; set; }
+
+        public Category Category { get; set; }
     }
 }
