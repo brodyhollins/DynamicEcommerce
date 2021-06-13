@@ -28,5 +28,23 @@ namespace DynamicEcommerce.Controllers
             };
             return View(model);
         }
+
+        public IActionResult Detail(int id)
+        {
+            var product = productService.GetById(id);
+
+            var model = new ProductDetailModel()
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price,
+                Image = product.Image,
+                Created = product.Created,
+                Category = product.Category
+            };
+
+            return View(model);
+        }
     }
 }

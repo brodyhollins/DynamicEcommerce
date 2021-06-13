@@ -1,0 +1,17 @@
+﻿@model DynamicEcommerce.Models.ProductDetailModel
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="@Model.Image" alt="@Model.Name" />
+        </div>
+        <div class="col-6">
+            <h4>@Model.Name</h4>
+            <p>@Model.Description</p>
+            <p>R @Model.Price</p>
+        </div>
+    </div>
+    <div class="row">
+        <a class="btn btn-primary" asp-controller="Product" asp-action="Index">Go Back</a>
+    </div>
+</div>
