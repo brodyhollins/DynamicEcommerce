@@ -34,9 +34,10 @@ namespace DynamicEcommerce.Services
 
         public IEnumerable<Product> GetWithQuery(string query)
         {
-            return GetAll()
+            return context.Products
+                .Include(category => category.Category)
                 .Where(
-                product => product.Name == query
+                product => product.Name.Contains(query)
                 );
         }
     }

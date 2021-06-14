@@ -3,17 +3,20 @@
 
 <div class="row justify-content-center">
     <div class="col-md-2 col-12 products-sidebar">
-        <form asp-controller="Product" asp-action="Search" method="post" enctype="multipart/form-data" id="insert-form">
+        <form method="get" asp-controller="Product" asp-action="Index">
             <div class="form-group">
-                <label>Search Products</label>
-                <input class="form-control" />
+                <label class="font-weight-bold">Search</label>
+                <input class="form-control" name="query" value="@Model.SearchQuery"/>
+                <div class="d-none">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
             </div>
         </form>
         <ul class="list-unstyled">
-            <li><a href="#">View All</a></li>
+            <li><a class="category-sidebar-link @(@ViewBag.Category == 0 ? "nav-link-active" : "")" asp-controller="Product" asp-action="Index">View All</a></li>
             @foreach (var category in ViewBag.Categories)
             {
-                <li><a href="#">@category.Name</a></li>
+                <li><a class="category-sidebar-link @(@ViewBag.Category == category.Id ? "nav-link-active" : "")" asp-controller="Product" asp-action="Category" asp-route-id="@category.Id">@category.Name</a></li>
             }
         </ul>
     </div>

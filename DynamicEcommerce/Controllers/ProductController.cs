@@ -20,9 +20,28 @@ namespace DynamicEcommerce.Controllers
             categoryService = _categoryService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string query)
         {
             var productList = productService.GetAll();
+
+            if (!String.IsNullOrEmpty(query))
+            {
+                productList = productService.GetWithQuery(query);
+            }
+            var model = new ProductIndexModel()
+            {
+                Products = productList,
+                SearchQuery = query
+            };
+
+            ViewBag.Categories = categoryService.GetAll();
+            ViewBag.Category = 0;
+            return View(model);
+        }
+
+        public IActionResult Category(int id)
+        {
+            var productList = productService.GetByCategory(id);
             var model = new ProductIndexModel()
             {
                 Products = productList,
@@ -30,7 +49,8 @@ namespace DynamicEcommerce.Controllers
             };
 
             ViewBag.Categories = categoryService.GetAll();
-            return View(model);
+            ViewBag.Category = id;
+            return View("Index", model);
         }
 
         public IActionResult Detail(int id)

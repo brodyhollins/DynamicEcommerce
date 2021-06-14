@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicEcommerce", "Dynamic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicEcommerce.Data", "..\DynamicEcommerce.Data\DynamicEcommerce.Data.csproj", "{31C4FF57-653B-417A-BFD9-65D4D28EA93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicEcommerce.Services", "..\DynamicEcommerce.Services\DynamicEcommerce.Services.csproj", "{53F9AE93-C067-459D-8B3D-FEC9E2F5C945}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicEcommerce.Services", "..\DynamicEcommerce.Services\DynamicEcommerce.Services.csproj", "{53F9AE93-C067-459D-8B3D-FEC9E2F5C945}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
