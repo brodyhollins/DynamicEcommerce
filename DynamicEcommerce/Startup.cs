@@ -31,6 +31,7 @@ namespace DynamicEcommerce
                     )
             );
             services.AddScoped<IProduct, ProductService>();
+            services.AddScoped<ICategory, CategoryService>();
             services.AddControllersWithViews();
         }
 

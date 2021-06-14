@@ -12,10 +12,12 @@ namespace DynamicEcommerce.Controllers
     public class ProductController : Controller
     {
         private readonly IProduct productService;
+        private readonly ICategory categoryService;
 
-        public ProductController(IProduct _productService)
+        public ProductController(IProduct _productService, ICategory _categoryService)
         {
             productService = _productService;
+            categoryService = _categoryService;
         }
 
         public IActionResult Index()
@@ -26,6 +28,8 @@ namespace DynamicEcommerce.Controllers
                 Products = productList,
                 SearchQuery = ""
             };
+
+            ViewBag.Categories = categoryService.GetAll();
             return View(model);
         }
 

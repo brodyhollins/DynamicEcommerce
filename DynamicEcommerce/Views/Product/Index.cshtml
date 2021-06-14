@@ -1,20 +1,37 @@
 ﻿@model DynamicEcommerce.Models.ProductIndexModel
 
 
-<div class="container">
-    <div class="row">
-        @foreach (var product in Model.Products)
-        {
-            <div class="d-flex flex-column mt-4">
-                <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">
-                    <div class="product-image" style="background-image:url(@product.Image)"></div>
-                </a>
-                <div class="text-center pl-3 mt-0">
-                    <p class="mb-0">@product.Name</p>
-                    <p class="font-weight-bold mb-0">R @product.Price</p>
-                    <a class="btn btn-primary px-4" asp-controller="Cart" asp-action="Add" asp-route-id="@product.Id">Add to Cart</a>
-                </div>
+<div class="row justify-content-center">
+    <div class="col-md-2 col-12 products-sidebar">
+        <form asp-controller="Product" asp-action="Search" method="post" enctype="multipart/form-data" id="insert-form">
+            <div class="form-group">
+                <label>Search Products</label>
+                <input class="form-control" />
             </div>
-        }
+        </form>
+        <ul class="list-unstyled">
+            <li><a href="#">View All</a></li>
+            @foreach (var category in ViewBag.Categories)
+            {
+                <li><a href="#">@category.Name</a></li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-10 col-12">
+        <div class="d-flex flex-wrap justify-content-center">
+            @foreach (var product in Model.Products)
+            {
+                <div class="d-flex flex-column mt-4">
+                    <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">
+                        <div class="product-image" style="background-image:url(@product.Image)"></div>
+                    </a>
+                    <div class="text-center pl-3 mt-0">
+                        <p class="mb-0">@product.Name</p>
+                        <p class="font-weight-bold mb-0">R @product.Price</p>
+                        <a class="btn btn-primary px-4" asp-controller="Cart" asp-action="Add" asp-route-id="@product.Id">Add to Cart</a>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
 </div>
