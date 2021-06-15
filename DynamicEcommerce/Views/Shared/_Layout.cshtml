@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using DynamicEcommerce.Data.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -13,21 +18,19 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3 py-3">
             <div class="container-fluid col-md-9 col-12">
-                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Product" asp-action="Index"><img class="mr-2" src="/images/logo-full.svg"/></a>
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Product" asp-action="Index"><img class="mr-2" src="/images/logo-full.svg" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
+                <div class="navbar-collapse collapse d-sm-inline-flex">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            @*<a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Product" ? "nav-link-active" : "")" asp-area="" asp-controller="Product" asp-action="Index">Products</a>*@
-                        </li>
-                        <li class="nav-item">
-                            @*<a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Test" ? "nav-link-active" : "")" asp-area="" asp-controller="Product" asp-action="Index">Test</a>*@
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Product" ? "nav-link-active" : "")" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
                         </li>
                     </ul>
+
+                    @await Html.PartialAsync("_LoginPartial") 
                 </div>
             </div>
         </nav>
