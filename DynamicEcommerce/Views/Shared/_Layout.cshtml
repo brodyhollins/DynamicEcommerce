@@ -26,11 +26,12 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Product" ? "nav-link-active" : "")" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
+                            <a class="nav-link " asp-area="" asp-controller="Product" asp-action="Index">Products</a>
                         </li>
                     </ul>
+                    @*@(ViewContext.RouteData.Values["Controller"].ToString() == "Product" ? "nav-link-active" : "")*@
 
-                    @await Html.PartialAsync("_LoginPartial") 
+                    @await Html.PartialAsync("_LoginPartial")
                 </div>
             </div>
         </nav>

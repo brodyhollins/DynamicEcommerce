@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using DynamicEcommerce.Data.Models
+@model DynamicEcommerce.Models.ApplicationUser.ProfileModel
+
+@inject UserManager<ApplicationUser> UserManager
+
+    <div class="container">
+        <div class="row">
+            <h1>User Profile</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Username: @Model.Username
+                    @if (Model.IsEmployee)
+                    {
+                       <span class="badge badge-primary">Employee</span>
+                    }
+                </p>
+                <p>Email: @Model.Email</p>
+                @*<p>Account Created: @Model.Created</p>*@
+            </div>
+        </div>
+    </div>
