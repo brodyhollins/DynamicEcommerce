@@ -121,7 +121,7 @@ namespace DynamicEcommerce.Data
             if (!hasEmployee)
             {
                 await userStore.CreateAsync(employee);
-                await userStore.AddToRoleAsync(employee, "Customer");
+                await userStore.AddToRoleAsync(employee, "Employee");
             }
 
             if (!hasCustomer1)

@@ -63,7 +63,7 @@ namespace DynamicEcommerce.Controllers
                 UserId = user.Id,
                 Username = user.UserName,
                 Email = user.Email,
-                IsEmployee = userRoles.Contains("Admin")
+                IsEmployee = (userRoles.Contains("Admin") || userRoles.Contains("Employee"))
             };
 
             return View(model);
