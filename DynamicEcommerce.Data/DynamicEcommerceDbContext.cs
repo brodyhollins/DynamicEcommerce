@@ -5,7 +5,7 @@ using System;
 
 namespace DynamicEcommerce.Data
 {
-    public class DynamicEcommerceDbContext : IdentityDbContext
+    public class DynamicEcommerceDbContext : IdentityDbContext<ApplicationUser>
     {
         public DynamicEcommerceDbContext(DbContextOptions options) : base(options)
         {

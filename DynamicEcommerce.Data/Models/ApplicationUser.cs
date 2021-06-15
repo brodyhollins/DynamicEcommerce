@@ -7,5 +7,6 @@ namespace DynamicEcommerce.Data.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        
     }
 }
