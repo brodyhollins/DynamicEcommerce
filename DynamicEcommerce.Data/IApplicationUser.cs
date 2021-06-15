@@ -7,7 +7,7 @@ namespace DynamicEcommerce.Data
 {
     public interface IApplicationUser
     {
-        ApplicationUser GetById(string id);
         IEnumerable<ApplicationUser> GetAll();
+        ApplicationUser GetById(string id);
     }
 }

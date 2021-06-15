@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using DynamicEcommerce.Data;
 using DynamicEcommerce.Data.Models;
 using DynamicEcommerce.Models.ApplicationUser;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DynamicEcommerce.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
@@ -23,27 +25,39 @@ namespace DynamicEcommerce.Controllers
             signInManager = _signInManager;
         }
 
-        public IActionResult Detail(string id)
+        [Authorize(Roles = "Admin, Employee")]
+        //[Authorize(Roles = "Employee")]
+        public IActionResult Index()
         {
-            var user = userService.GetById(id);
-            var userRoles = userManager.GetRolesAsync(user).Result;
-            var model = new ProfileModel()
+            var userList = userService.GetAll()
+                .Select(u => new ProfileModel 
+                {
+                    UserId = u.Id,
+                    Email = u.Email,
+                    Username = u.UserName
+                });
+            var model = new ProfileIndexModel()
             {
-                UserId = user.Id,
-                Username = user.UserName,
-                Email = user.Email,
-                IsEmployee = userRoles.Contains("Employee")
+                Users = userList
             };
 
             return View(model);
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Logout()
-        //{
-        //    await signInManager.SignOutAsync();
-        //    return RedirectToAction(nameof(ProductController.Index), "Product");
-        //}
+        public IActionResult Detail(string id)
+        {
+            var user = userService.GetById(id);
+            var userRoles = userManager.GetRolesAsync(user).Result;
+
+            var model = new ProfileModel()
+            {
+                UserId = user.Id,
+                Username = user.UserName,
+                Email = user.Email,
+                IsEmployee = userRoles.Contains("Admin")
+            };
+
+            return View(model);
+        }
     }
 }
