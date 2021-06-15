@@ -1,4 +1,7 @@
 ﻿@model DynamicEcommerce.Models.ProductIndexModel
+@using Microsoft.AspNetCore.Identity
+@using DynamicEcommerce.Data.Models
+@inject SignInManager<ApplicationUser> SignInManager
 
 
 <div class="row justify-content-center">
@@ -6,7 +9,7 @@
         <form method="get" asp-controller="Product" asp-action="Index">
             <div class="form-group">
                 <label class="font-weight-bold">Search</label>
-                <input class="form-control" name="query" value="@Model.SearchQuery"/>
+                <input class="form-control" name="query" value="@Model.SearchQuery" />
                 <div class="d-none">
                     <button type="submit" class="btn btn-primary">Search</button>
                 </div>
@@ -30,8 +33,11 @@
                     </a>
                     <div class="text-center pl-3 mt-0">
                         <p class="mb-0">@product.Name</p>
-                        <p class="font-weight-bold mb-0">R @product.Price</p>
-                        <a class="btn btn-primary px-4" asp-controller="Cart" asp-action="Add" asp-route-id="@product.Id">Add to Cart</a>
+                        <p class="font-weight-bold mb-3">R @product.Price</p>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <a class="btn btn-primary px-4" asp-controller="Order" asp-action="Create" asp-route-id="@product.Id">Buy Now</a>
+                        }
                     </div>
                 </div>
             }

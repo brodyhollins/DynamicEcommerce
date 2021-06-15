@@ -1,6 +1,12 @@
 ﻿@model DynamicEcommerce.Models.ProductDetailModel
+@using Microsoft.AspNetCore.Identity
+@using DynamicEcommerce.Data.Models
+@inject SignInManager<ApplicationUser> SignInManager
 
 <div class="container">
+    <div class="row">
+        <a class="btn btn-primary" asp-controller="Product" asp-action="Index">Go Back</a>
+    </div>
     <div class="row">
         <div class="col-6">
             <img class="img-fluid" src="@Model.Image" alt="@Model.Name" />
@@ -9,9 +15,10 @@
             <h4>@Model.Name</h4>
             <p>@Model.Description</p>
             <p>R @Model.Price</p>
+            @if (SignInManager.IsSignedIn(User))
+            {
+        <a class="btn btn-primary px-4" asp-controller="Order" asp-action="Create" asp-route-id="@Model.Id">Buy Now</a>
+            }
         </div>
-    </div>
-    <div class="row">
-        <a class="btn btn-primary" asp-controller="Product" asp-action="Index">Go Back</a>
     </div>
 </div>

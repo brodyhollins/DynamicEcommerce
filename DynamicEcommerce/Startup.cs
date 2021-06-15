@@ -38,6 +38,7 @@ namespace DynamicEcommerce
             services.AddScoped<IProduct, ProductService>();
             services.AddScoped<ICategory, CategoryService>();
             services.AddScoped<IApplicationUser, ApplicationUserService>();
+            services.AddScoped<IOrder, OrderService>();
             services.AddTransient<DataSeeder>();
 
             services.AddControllersWithViews();

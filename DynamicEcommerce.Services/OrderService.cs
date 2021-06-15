@@ -1,8 +1,11 @@
 ﻿using DynamicEcommerce.Data;
 using DynamicEcommerce.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DynamicEcommerce.Services
 {
@@ -14,24 +17,33 @@ namespace DynamicEcommerce.Services
             context = _context;
         }
 
+        public async Task Add(Order order)
+        {
+            context.Add(order);
+            await context.SaveChangesAsync();
+        }
+
         public IEnumerable<Order> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Orders
+                .Include(product => product.Product)
+                .Include(user => user.User);
         }
 
         public Order GetById(int id)
         {
-            throw new NotImplementedException();
+            return context.Orders.Find(id);
         }
 
         public IEnumerable<Order> GetByProductCategory(int id)
         {
-            throw new NotImplementedException();
+            return GetAll()
+                .Where(i => i.Product.Category.Id == id);
         }
 
-        public IEnumerable<Order> GetByUser(int id)
+        public IEnumerable<Order> GetByUser(string id)
         {
-            throw new NotImplementedException();
+            return GetAll().Where(x => x.User.Id == id);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using DynamicEcommerce.Data;
@@ -17,11 +18,13 @@ namespace DynamicEcommerce.Controllers
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly IApplicationUser userService;
+        private readonly IOrder orderService;
 
-        public ProfileController(UserManager<ApplicationUser> _userManager, IApplicationUser _userService, SignInManager<ApplicationUser> _signInManager)
+        public ProfileController(UserManager<ApplicationUser> _userManager, IApplicationUser _userService, SignInManager<ApplicationUser> _signInManager, IOrder _orderService)
         {
             userManager = _userManager;
             userService = _userService;
+            orderService = _orderService;
             signInManager = _signInManager;
         }
 
@@ -48,6 +51,12 @@ namespace DynamicEcommerce.Controllers
         {
             var user = userService.GetById(id);
             var userRoles = userManager.GetRolesAsync(user).Result;
+
+            var orders = orderService.GetByUser(id);
+
+            ViewBag.Orders = orders;
+
+            Debug.WriteLine(orders);
 
             var model = new ProfileModel()
             {

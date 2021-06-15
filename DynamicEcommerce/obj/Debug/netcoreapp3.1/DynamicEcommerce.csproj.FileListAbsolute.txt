@@ -184,3 +184,5 @@ C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\D
 C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
 C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Detail.cshtml.g.cs
 C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Index.cshtml.g.cs
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce\obj\Debug\netcoreapp3.1\Razor\Views\Order\Create.cshtml.g.cs
+C:\Users\Brody's PC\Desktop\Coding\Varsity\Year 3\Semester 1\Programming\Task2\DynamicEcommerce\DynamicEcommerce\obj\Debug\netcoreapp3.1\Razor\Views\Order\Index.cshtml.g.cs

@@ -1,0 +1,24 @@
+﻿@model DynamicEcommerce.Models.Order.OrderModel
+
+<h1>
+    Cart
+</h1>
+<div class="row justify-content-center">
+    <form asp-controller="Order" asp-action="Place" method="post" id="placeOrder">
+        <div class="d-flex flex-column col-4">
+            <img class="img-fluid" src="@Model.ProductImage" alt="@Model.ProductName" />
+            <div class="mt-0 mb-5">
+                <p class="mb-0"><span class="font-weight-bold">Product:</span>  @Model.ProductName</p>
+                <p class="mb-0"><span class="font-weight-bold">Quantity:</span> @Model.Quantity</p>
+            </div>
+            <p class="mb-0 text-right mb-3"><span class="font-weight-bold">Total Amount:</span> R @Model.ProductPrice</p>
+            <button type="submit" id="submitOrder" class="btn btn-primary px-4">Checkout</button>
+        </div>
+        <input type="hidden" asp-for="ProductId" />
+        <input type="hidden" asp-for="ProductName" />
+        <input type="hidden" asp-for="ProductImage" />
+        <input type="hidden" asp-for="ProductPrice" />
+        <input type="hidden" asp-for="Quantity" />
+    </form>
+    
+</div>

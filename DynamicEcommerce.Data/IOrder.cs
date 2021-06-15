@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DynamicEcommerce.Data
 {
@@ -9,7 +10,8 @@ namespace DynamicEcommerce.Data
     {
         IEnumerable<Order> GetAll();
         IEnumerable<Order> GetByProductCategory(int id);
-        IEnumerable<Order> GetByUser(int id);
+        IEnumerable<Order> GetByUser(string id);
         Order GetById(int id);
+        Task Add(Order order);
     }
 }
